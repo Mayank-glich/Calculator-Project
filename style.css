@@ -5,6 +5,17 @@
 
 
 
+    /* For calculator container */
+    .Calculator {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.15);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+    }
+
+
+
     body {
         margin: 0;
         min-height: 100vh;
@@ -15,14 +26,14 @@
     }
 
 
-
+    /* 
     .Calculator {
         background-color: white;
         width: 400px;
         border-radius: 12px;
         box-shadow: 0 5px 30px -5px rgb(0, 0, 0, 0.6);
 
-    }
+    } */
 
 
 
@@ -57,16 +68,19 @@
 
     }
 
+
     button {
+        cursor: pointer;
+        font-weight: 100px;
         min-height: 50px;
         font-size: 20px;
-        font-weight: 100px;
-        color: black;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: rgba(191, 190, 190, 0.6);
+        border-radius: 12px 0 12px 0;
+        backdrop-filter: blur(6px);
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
+
+
 
     button:hover {
         filter: brightness(110%);
@@ -106,6 +120,33 @@
         grid-row: 2/ span 4;
 
     }
+
+    :root {
+        --bg-color: lightgray;
+        --text-color: #000000;
+        --btn-color: #f0f0f0;
+    }
+
+    .dark-theme {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --btn-color: #333333;
+    }
+
+    body {
+        background: var(--bg-color);
+        color: var(--text-color);
+        transition: 0.3s ease;
+    }
+
+    button {
+        background: var(--btn-color);
+        color: var(--text-color);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
 
     /* @media screen and (min-width: 600px){
         .Calculator{

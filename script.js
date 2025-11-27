@@ -1,6 +1,20 @@
 const calculatorDisplay = document.querySelector('h2');
 const inputBtns = document.querySelectorAll('button');
 const clearBtn = document.querySelector('.clear');
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+
+    // Change button text
+    if (document.body.classList.contains("dark-theme")) {
+        toggleBtn.textContent = "Light Mode";
+    } else {
+        toggleBtn.textContent = "Dark Mode";
+    }
+});
+
+
 
 let firstValue = 0;
 let operatorValue = "";
